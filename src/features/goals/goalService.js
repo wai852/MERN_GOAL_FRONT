@@ -1,6 +1,7 @@
 //make http request and respond;
 //send the data in storage
 import axios from 'axios'
+import API_BASE_URL from '../../app/api/apiSlice';
 
 //can put localhost 5000 here or make a proxy 
 const API_URL = '/api/goals/'
@@ -14,7 +15,7 @@ async function createGoal(textContent,token){
         },
     }
     //request to post to this url 
-    const response = await axios.post(API_URL, textContent, config);
+    const response = await axios.post(API_BASE_URL+API_URL, textContent, config);
     return response.data;
 }
 //get goals
