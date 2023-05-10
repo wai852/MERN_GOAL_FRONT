@@ -5,7 +5,7 @@ import axios from 'axios'
 import API_BASE_URL from '../../app/api/apiSlice';
 //can put localhost 5000 here or make a proxy 
 const API_URL = '/api/users/'
-
+console.log(API_BASE_URL);
 //register user
 async function register(userData){
     //post the user data by this url and assign 
