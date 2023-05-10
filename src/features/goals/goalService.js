@@ -27,7 +27,7 @@ async function getGoals(token){
         },
     }
     //request to post to this url 
-    const response = await axios.get(API_URL, config);
+    const response = await axios.get(API_BASE_URL+API_URL, config);
     return response.data;
 }
 //delete a goal
@@ -38,7 +38,7 @@ async function deleteGoal(goalId, token){
         },
     }
     //request to post to this url 
-    const response = await axios.delete(API_URL+goalId, config);
+    const response = await axios.delete(API_BASE_URL+API_URL+goalId, config);
     return response.data;
 }
 
